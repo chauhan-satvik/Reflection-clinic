@@ -132,11 +132,11 @@ const Services: React.FC = () => {
                 {cat.services.map((service, idx) => (
                   <div 
                     key={idx}
-                    className="group relative bg-royal-900/50 border border-white/5 hover:border-gold-500/50 transition-all duration-700 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] reveal-on-scroll opacity-0 translate-y-10 rounded-sm"
+                    className="group relative bg-royal-900/50 border border-white/5 hover:border-gold-500/30 transition-all duration-700 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5),0_0_30px_-5px_rgba(198,156,109,0.1)] reveal-on-scroll opacity-0 translate-y-10 rounded-sm overflow-hidden"
                     style={{ transitionDelay: `${idx * 100}ms` }}
                   >
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    {/* Hover Glow Effect - Inner Highlight */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
                     {/* Image Area */}
                     <div className="relative h-72 overflow-hidden border-b border-white/5">
@@ -144,24 +144,29 @@ const Services: React.FC = () => {
                         <img 
                             src={service.image} 
                             alt={service.name} 
-                            className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0" 
+                            className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)] group-hover:scale-110 grayscale group-hover:grayscale-0" 
                         />
                     </div>
 
                     {/* Content Area */}
                     <div className="p-8 flex flex-col flex-grow relative z-20">
-                        {/* Title */}
-                        <h3 className="font-display text-2xl text-white mb-4 group-hover:text-gold-400 transition-colors duration-500">
+                        {/* Title with movement and glow */}
+                        <h3 className="font-display text-2xl text-white mb-4 group-hover:text-gold-400 transition-all duration-500 group-hover:translate-x-2 group-hover:drop-shadow-[0_0_15px_rgba(198,156,109,0.3)]">
                             {service.name}
                         </h3>
                         
-                        {/* Decorative animated line */}
-                        <div className="w-12 h-[1px] bg-gold-500/50 mb-6 group-hover:w-full transition-all duration-700 ease-out"></div>
+                        {/* Decorative animated line with glow */}
+                        <div className="w-12 h-[1px] bg-gold-500/50 mb-6 group-hover:w-full transition-all duration-1000 ease-out group-hover:bg-gold-400/80 group-hover:shadow-[0_0_10px_rgba(198,156,109,0.5)]"></div>
                         
                         {/* Description */}
-                        <p className="text-slate-400 font-light leading-loose text-sm flex-grow">
+                        <p className="text-slate-400 font-light leading-loose text-sm flex-grow group-hover:text-slate-300 transition-colors duration-500">
                             {service.detail}
                         </p>
+
+                         {/* Subtle icon appearance in corner */}
+                        <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
+                            <Diamond className="text-gold-500/20 w-8 h-8 rotate-45" />
+                        </div>
                     </div>
                   </div>
                 ))}

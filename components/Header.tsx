@@ -81,7 +81,10 @@ const Header: React.FC = () => {
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
               </button>
             ))}
-            <button className="bg-gold-500 text-royal-950 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-all duration-500 transform hover:scale-105 shadow-[0_0_20px_rgba(198,156,109,0.3)] cursor-pointer">
+            <button 
+              onClick={() => handleNavClick('/book')}
+              className="bg-gold-500 text-royal-950 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-all duration-500 transform hover:scale-105 shadow-[0_0_20px_rgba(198,156,109,0.3)] cursor-pointer"
+            >
               Book Visit
             </button>
           </nav>
@@ -110,7 +113,10 @@ const Header: React.FC = () => {
           {link.name}
         </button>
       ))}
-      <button className="bg-gold-500 text-royal-950 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest mt-4 cursor-pointer">
+      <button 
+        onClick={() => handleNavClick('/book')}
+        className="bg-gold-500 text-royal-950 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest mt-4 cursor-pointer"
+      >
         Book Visit
       </button>
     </div>
