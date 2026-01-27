@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import React, { useEffect } from 'react';
 import { MemoryRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -7,14 +8,15 @@ import Doctors from './pages/Doctors';
 import Services from './pages/Services';
 import BookVisit from './pages/BookVisit';
 
+
 // Scroll to top on route change
-const ScrollToTop = () => {
+function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathname]);
   return null;
-};
+}
 
 const App: React.FC = () => {
   return (
