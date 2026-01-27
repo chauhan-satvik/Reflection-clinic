@@ -42,48 +42,72 @@ const Home: React.FC = () => {
       <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-royal-950/90 via-royal-950/60 to-royal-950 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-royal-950/90 via-royal-950/70 to-royal-950 z-10"></div>
             <img 
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop" 
                 alt="Luxury Clinic Interior" 
-                className="w-full h-full object-cover animate-slow-zoom opacity-50"
+                className="w-full h-full object-cover animate-slow-zoom opacity-40"
             />
         </div>
 
         <div className="relative z-20 text-center container mx-auto px-6 max-w-5xl flex flex-col items-center">
-          <div className="mb-10 opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.2s' }}>
-             <span className="inline-flex items-center gap-2 py-2 px-6 border border-gold-500/30 rounded-full bg-royal-950/50 backdrop-blur-md text-gold-500 text-xs tracking-[0.4em] uppercase shadow-[0_0_20px_rgba(198,156,109,0.2)]">
-               <Diamond size={12} /> The Platinum Standard
+          <div className="mb-12 opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.2s' }}>
+             <span className="inline-flex items-center gap-3 py-3 px-8 border border-gold-500/50 rounded-full bg-royal-950/80 backdrop-blur-xl text-gold-400 text-xs font-bold tracking-[0.4em] uppercase shadow-[0_0_30px_rgba(198,156,109,0.3)]">
+               <Crown size={14} className="fill-gold-500" /> The Platinum Standard
              </span>
           </div>
           
-          {/* UNIQUE BRANDING ELEMENT */}
-          <div className="relative mb-8 opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.3s' }}>
-              <div className="text-[12rem] md:text-[16rem] leading-none font-display text-transparent bg-clip-text bg-gradient-to-b from-gold-300 to-gold-700 opacity-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+          {/* UNIQUE BRANDING ELEMENT - MONSTER HIGHLIGHT */}
+          <div className="relative mb-12 opacity-0 translate-y-10 reveal-on-scroll w-full" style={{ animationDelay: '0.3s' }}>
+              {/* Background Giant 'R' - Subtle Depth */}
+              <div className="text-[15rem] md:text-[22rem] leading-none font-display text-transparent bg-clip-text bg-gradient-to-b from-gold-500/5 to-transparent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0 blur-sm">
                   R
               </div>
-              <h1 className="font-display text-6xl md:text-9xl text-white leading-tight relative z-10 drop-shadow-2xl">
-                REFLECTION
-              </h1>
-              <div className="h-1 w-32 bg-gold-500 mx-auto mt-6 mb-6"></div>
-              <span className="text-gold-200 font-serif italic text-3xl md:text-5xl block tracking-wide">
-                Premium Healthcare
+              
+              <div className="relative z-10 flex flex-col items-center justify-center">
+                {/* 1. Outer Bloom (Large diffuse glow) */}
+                <h1 className="absolute font-display text-6xl md:text-9xl font-bold leading-tight text-gold-600 blur-[60px] opacity-40 select-none scale-110" aria-hidden="true">
+                  REFLECTION
+                </h1>
+
+                {/* 2. Inner Bloom (Tighter brighter glow) */}
+                <h1 className="absolute font-display text-6xl md:text-9xl font-bold leading-tight text-gold-400 blur-[20px] opacity-60 select-none" aria-hidden="true">
+                  REFLECTION
+                </h1>
+
+                {/* 3. Main Text (High Contrast Gradient) */}
+                <h1 className="relative font-display text-6xl md:text-9xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-gold-200 to-gold-600 drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)] filter brightness-110">
+                  REFLECTION
+                </h1>
+              </div>
+
+              <div className="h-[2px] w-32 md:w-64 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-8 mb-8 shadow-[0_0_20px_#fbbf24]"></div>
+              
+              <span className="text-white font-serif italic text-3xl md:text-5xl block tracking-wide drop-shadow-lg">
+                <span className="text-gold-300">Premium</span> Healthcare
               </span>
           </div>
           
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-14 font-light leading-relaxed opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.6s' }}>
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-16 font-light leading-relaxed opacity-0 translate-y-10 reveal-on-scroll drop-shadow-md" style={{ animationDelay: '0.6s' }}>
             A sanctuary for those who demand the absolute best in Dental, Aesthetic, and Oncology care.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center opacity-0 translate-y-10 reveal-on-scroll" style={{ animationDelay: '0.8s' }}>
             <button 
               onClick={() => navigate('/doctors')}
               type="button"
-              className="group relative bg-transparent border border-gold-500/30 text-white px-10 py-4 rounded-full uppercase tracking-[0.2em] text-xs font-bold hover:border-gold-500 hover:text-gold-500 hover:shadow-[0_0_30px_rgba(198,156,109,0.2)] transition-all duration-500 cursor-pointer flex items-center justify-center gap-3 overflow-hidden"
+              className="group relative bg-gold-600 text-royal-950 px-12 py-5 rounded-full uppercase tracking-[0.2em] text-xs font-bold hover:bg-white hover:text-royal-950 hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500 cursor-pointer flex items-center justify-center gap-3 overflow-hidden shadow-[0_0_20px_rgba(198,156,109,0.4)]"
             >
               <span className="relative z-10">Meet The Masters</span>
               <span className="relative z-10 transform group-hover:translate-x-1 transition-transform">→</span>
-              <div className="absolute inset-0 bg-gold-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+            </button>
+            
+            <button 
+              onClick={() => handleScrollToExpertise()}
+              type="button"
+              className="group relative bg-transparent border border-white/20 text-white px-12 py-5 rounded-full uppercase tracking-[0.2em] text-xs font-bold hover:border-gold-500 hover:text-gold-500 transition-all duration-500 cursor-pointer flex items-center justify-center gap-3 overflow-hidden backdrop-blur-sm"
+            >
+              <span className="relative z-10">Explore Services</span>
             </button>
           </div>
         </div>
