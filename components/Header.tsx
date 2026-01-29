@@ -63,7 +63,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <button onClick={() => handleNavClick('/')} className="group relative z-50 flex items-center gap-3 bg-transparent border-none p-0 cursor-pointer">
              <img 
-               src="/logo.png" 
+               src="/Logo.png" 
                alt="REFLECTION Clinic Logo" 
                className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-500 ease-out group-hover:scale-105 opacity-95 group-hover:opacity-100"
              />
