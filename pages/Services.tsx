@@ -97,11 +97,11 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="bg-royal-950 min-h-screen pt-24 pb-20 text-slate-200">
+    <div className="bg-royal-950 min-h-screen pt-32 pb-20 text-slate-200">
       
       {/* 1. Header */}
       <section className="container mx-auto px-6 mb-24 text-center">
-        <h1 className="font-display text-6xl md:text-7xl text-white mb-6 reveal-on-scroll opacity-0 translate-y-10">
+        <h1 className="font-display text-5xl md:text-6xl text-white mb-6 reveal-on-scroll opacity-0 translate-y-10">
           Our Services
         </h1>
         <div className="flex justify-center items-center gap-4 reveal-on-scroll opacity-0 translate-y-10 delay-100">

@@ -62,9 +62,11 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <button onClick={() => handleNavClick('/')} className="group relative z-50 flex items-center gap-3 bg-transparent border-none p-0 cursor-pointer">
-             <div className="w-8 h-8 md:w-10 md:h-10 border border-gold-500 rounded-lg md:rounded-xl flex items-center justify-center rotate-45 group-hover:rotate-180 transition-transform duration-700 ease-out bg-royal-950/50">
-                <span className="text-gold-500 font-display font-bold text-lg md:text-xl -rotate-45 group-hover:rotate-180 transition-transform duration-700">R</span>
-             </div>
+             <img 
+               src="/logo.png" 
+               alt="REFLECTION Clinic Logo" 
+               className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-500 ease-out group-hover:scale-105 opacity-95 group-hover:opacity-100"
+             />
              <div className="flex flex-col text-left">
                <span className="text-xl md:text-2xl font-display font-bold tracking-[0.15em] text-white group-hover:text-gold-500 transition-colors duration-500">REFLECTION</span>
              </div>
